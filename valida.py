@@ -1,6 +1,8 @@
 from itertools import *
 
 def valida_cpf():
+    print('Execution from valida_cpf function')
+
     cpf = 96451963020
     cpfChars = str(cpf)
     if (len(cpfChars) == 11):
@@ -17,5 +19,8 @@ def valida_cpf():
 if __name__ == "__main__":
     valida_cpf()
 
+
 def main():
+    print('Execution from main method')
+    # TODO: Get info from user input
     valida_cpf()
