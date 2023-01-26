@@ -1,6 +1,13 @@
 from itertools import islice
 import sys
 
+"""
+Usage
+
+REPL:           main(96451963020)
+Command Line:   python valida.py 96451963020
+"""
+
 def valida_cpf(cpf):
     # cpf = 96451963020
     cpfChars = str(cpf)
@@ -16,12 +23,11 @@ def valida_cpf(cpf):
             print(f"{index} - {value}")
     
 
-def main():
-    cpf_input = sys.argv[1]
-    print(f'Execution from main method: Received arg1 {cpf_input}')
-    print(f'Arg0 {sys.argv[0]}')
+def main(cpf_input):
+    print(f'Execution from main method: Received {cpf_input}')
     valida_cpf(cpf_input)
 
 
 if __name__ == "__main__":
-    main()
+    cpf_input = sys.argv[1]
+    main(cpf_input=cpf_input)
