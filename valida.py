@@ -1,9 +1,8 @@
-from itertools import *
+from itertools import islice
+import sys
 
-def valida_cpf():
-    print('Execution from valida_cpf function')
-
-    cpf = 96451963020
+def valida_cpf(cpf):
+    # cpf = 96451963020
     cpfChars = str(cpf)
     if (len(cpfChars) == 11):
         # Iterate through first 9 digits
@@ -16,11 +15,13 @@ def valida_cpf():
         for index, value in enumerate(islice(cpfChars, 0, 10)):
             print(f"{index} - {value}")
     
-if __name__ == "__main__":
-    valida_cpf()
-
 
 def main():
-    print('Execution from main method')
-    # TODO: Get info from user input
-    valida_cpf()
+    cpf_input = sys.argv[1]
+    print(f'Execution from main method: Received arg1 {cpf_input}')
+    print(f'Arg0 {sys.argv[0]}')
+    valida_cpf(cpf_input)
+
+
+if __name__ == "__main__":
+    main()
